@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neon Snake — Browser Arcade</title>
+<link rel="stylesheet" href="../../shared/styles.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="back-link" href="../../index.html">← Arcade</a>
+
+<header class="game-header">
+  <h1>🐍 Neon Snake</h1>
+  <p>Eat the orbs, grow long, don't bite yourself.</p>
+</header>
+
+<div class="hud">
+  <div class="stat"><span class="label">Score</span><span class="value" id="score">0</span></div>
+  <div class="stat"><span class="label">Best</span><span class="value" id="best">0</span></div>
+  <div class="stat"><span class="label">Level</span><span class="value" id="level">1</span></div>
+</div>
+
+<div class="game-shell" id="shell">
+  <canvas id="board" width="441" height="441" aria-label="Snake game board"></canvas>
+
+  <div class="overlay" id="overlay-start">
+    <h2>Ready?</h2>
+    <p>Steer with <kbd>←</kbd><kbd>↑</kbd><kbd>→</kbd><kbd>↓</kbd> or <kbd>WASD</kbd>.<br>
+       Pause with <kbd>Space</kbd>.</p>
+    <button class="btn primary" id="btn-start">Start Game</button>
+    <p class="tiny-hint">or press <kbd>Enter</kbd></p>
+  </div>
+
+  <div class="overlay hidden" id="overlay-pause">
+    <h2>Paused</h2>
+    <button class="btn primary" id="btn-resume">Resume</button>
+    <p class="tiny-hint">or press <kbd>Space</kbd></p>
+  </div>
+
+  <div class="overlay hidden" id="overlay-over">
+    <h2 id="over-title">Game Over</h2>
+    <p>Score <strong id="final-score">0</strong> · Length <strong id="final-length">3</strong></p>
+    <p class="new-best hidden" id="new-best">🏆 New personal best!</p>
+    <button class="btn primary" id="btn-restart">Play Again</button>
+    <p class="tiny-hint">or press <kbd>Enter</kbd></p>
+  </div>
+</div>
+
+<div class="dpad" aria-label="Touch controls">
+  <button class="pad pad-up" data-dir="up" aria-label="Move up">▲</button>
+  <button class="pad pad-left" data-dir="left" aria-label="Move left">◀</button>
+  <button class="pad pad-down" data-dir="down" aria-label="Move down">▼</button>
+  <button class="pad pad-right" data-dir="right" aria-label="Move right">▶</button>
+</div>
+
+<section class="instructions card">
+  <strong>How to play:</strong> guide the snake to the glowing orb. Each orb adds a
+  segment and scores <em>10 × level</em>. Every 5 orbs the snake speeds up.
+  Hitting a wall or your own tail ends the run.
+</section>
+
+<script src="../../shared/common.js"></script>
+<script src="game.js"></script>
+</body>
+</html>

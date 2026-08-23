@@ -5,7 +5,7 @@ Source of truth for project progress. Updated after every meaningful milestone.
 | # | Game | Folder | Planning | Implementation | Testing | Committed | Pushed | Status |
 |---|------|--------|----------|----------------|---------|-----------|--------|--------|
 | 0 | Project setup (docs, repo, hub, shared UI, test harness) | — | ✅ | ✅ | ✅ | ✅ | ✅ | Complete |
-| 1 | Neon Snake | `games/game-01-snake` | ✅ | ⬜ | ⬜ | ⬜ | ⬜ | Not started |
+| 1 | Neon Snake | `games/game-01-snake` | ✅ | ✅ | ✅ | ✅ | ✅ | Complete |
 | 2 | Memory Card Match | `games/game-02-memory-match` | ✅ | ⬜ | ⬜ | ⬜ | ⬜ | Not started |
 | 3 | Minesweeper Classic | `games/game-03-minesweeper` | ✅ | ⬜ | ⬜ | ⬜ | ⬜ | Not started |
 | 4 | 2048 Merge | `games/game-04-2048` | ✅ | ⬜ | ⬜ | ⬜ | ⬜ | Not started |
