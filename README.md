@@ -10,6 +10,16 @@ vanilla HTML/CSS/JavaScript — no frameworks, no build step. Open any game's
 
 Every game is playable directly from that page — no install, no build.
 
+## 🧾 One prompt, whole project
+
+This entire repository — the GitHub repo itself, all 10 games, the shared UI
+system, the 123-test suite, the sprint documentation system, every commit and
+push along the way, and the GitHub Pages deployment — was produced by a
+**single autonomous agent prompt**, executed end-to-end without human
+intervention.
+
+The complete prompt is preserved verbatim in **[`PROMPT.md`](PROMPT.md)**.
+
 > This project is being built autonomously, one sprint per game. Progress is tracked
 > in [`PROGRESS.md`](PROGRESS.md); live agent state in [`EXECUTION.md`](EXECUTION.md).
 
