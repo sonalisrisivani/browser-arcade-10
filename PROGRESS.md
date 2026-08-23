@@ -8,7 +8,7 @@ Source of truth for project progress. Updated after every meaningful milestone.
 | 1 | Neon Snake | `games/game-01-snake` | ✅ | ✅ | ✅ | ✅ | ✅ | Complete |
 | 2 | Memory Card Match | `games/game-02-memory-match` | ✅ | ✅ | ✅ | ✅ | ✅ | Complete |
 | 3 | Minesweeper Classic | `games/game-03-minesweeper` | ✅ | ✅ | ✅ | ✅ | ✅ | Complete |
-| 4 | 2048 Merge | `games/game-04-2048` | ✅ | ⬜ | ⬜ | ⬜ | ⬜ | Not started |
+| 4 | 2048 Merge | `games/game-04-2048` | ✅ | ✅ | ✅ | ✅ | ✅ | Complete |
 | 5 | Brick Breaker | `games/game-05-breakout` | ✅ | ⬜ | ⬜ | ⬜ | ⬜ | Not started |
 | 6 | Block Drop | `games/game-06-block-drop` | ✅ | ⬜ | ⬜ | ⬜ | ⬜ | Not started |
 | 7 | Flappy Glide | `games/game-07-flappy-glide` | ✅ | ⬜ | ⬜ | ⬜ | ⬜ | Not started |

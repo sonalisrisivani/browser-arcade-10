@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2048 Merge — Browser Arcade</title>
+<link rel="stylesheet" href="../../shared/styles.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="back-link" href="../../index.html">← Arcade</a>
+
+<header class="game-header">
+  <h1>🔢 2048 Merge</h1>
+  <p>Slide, merge, double up. Can you make the 2048 tile?</p>
+</header>
+
+<div class="hud">
+  <div class="stat"><span class="label">Score</span><span class="value" id="score">0</span></div>
+  <div class="stat"><span class="label">Best</span><span class="value" id="best">0</span></div>
+</div>
+
+<div class="controls-row" style="margin-bottom:.75rem;">
+  <button class="btn primary small" id="btn-new">New Game</button>
+  <button class="btn ghost small" id="btn-undo" disabled>↶ Undo</button>
+</div>
+
+<div class="game-shell board-wrap">
+  <div id="board" class="g2048" aria-label="2048 board">
+    <div class="cellbg"></div><div class="cellbg"></div><div class="cellbg"></div><div class="cellbg"></div>
+    <div class="cellbg"></div><div class="cellbg"></div><div class="cellbg"></div><div class="cellbg"></div>
+    <div class="cellbg"></div><div class="cellbg"></div><div class="cellbg"></div><div class="cellbg"></div>
+    <div class="cellbg"></div><div class="cellbg"></div><div class="cellbg"></div><div class="cellbg"></div>
+    <div id="tiles"></div>
+  </div>
+
+  <div class="overlay hidden" id="overlay-start">
+    <h2>Join the numbers!</h2>
+    <p>Use <kbd>←</kbd><kbd>↑</kbd><kbd>→</kbd><kbd>↓</kbd> or swipe.<br>
+       Equal tiles merge into their sum.</p>
+    <button class="btn primary" id="btn-start">Start</button>
+  </div>
+
+  <div class="overlay hidden" id="overlay-won">
+    <h2>🎉 You made 2048!</h2>
+    <p>Score <strong id="won-score">0</strong></p>
+    <button class="btn primary" id="btn-continue">Keep Going</button>
+    <button class="btn ghost" id="btn-fresh">New Game</button>
+  </div>
+
+  <div class="overlay hidden" id="overlay-over">
+    <h2>No moves left!</h2>
+    <p>Final score <strong id="over-score">0</strong></p>
+    <button class="btn primary" id="btn-retry">Try Again</button>
+    <button class="btn ghost" id="btn-undo-over">↶ Undo Last Move</button>
+  </div>
+</div>
+
+<section class="instructions card">
+  <strong>How to play:</strong> slide every tile with an arrow key or swipe. When two
+  equal tiles collide they merge into one worth their sum. Each move spawns a new
+  tile — reach <strong>2048</strong> to win, and keep going for a higher score!
+</section>
+
+<script src="../../shared/common.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
