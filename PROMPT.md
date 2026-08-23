@@ -3,6 +3,8 @@
 > **This file contains the single prompt that produced the entire repository** —
 > from creating the GitHub repo, through planning, building and testing all 10
 > games, to deploying the site to GitHub Pages. It is reproduced verbatim below.
+>
+> Run with **OpenCode CLI** using the **Ox Alpha (unlimited)** model.
 
 ---
 

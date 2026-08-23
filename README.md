@@ -18,6 +18,9 @@ push along the way, and the GitHub Pages deployment — was produced by a
 **single autonomous agent prompt**, executed end-to-end without human
 intervention.
 
+- **Agent/CLI:** [OpenCode CLI](https://opencode.ai)
+- **Model:** Ox Alpha (unlimited)
+
 The complete prompt is preserved verbatim in **[`PROMPT.md`](PROMPT.md)**.
 
 > This project is being built autonomously, one sprint per game. Progress is tracked
