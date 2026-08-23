@@ -1,0 +1,15 @@
+.stage-wrap {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+#stage {
+  display: block;
+  width: 100%;
+  aspect-ratio: 480 / 600;
+  background: var(--bg-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  cursor: none;
+}

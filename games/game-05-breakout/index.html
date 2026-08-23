@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brick Breaker — Browser Arcade</title>
+<link rel="stylesheet" href="../../shared/styles.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="back-link" href="../../index.html">← Arcade</a>
+
+<header class="game-header">
+  <h1>🧱 Brick Breaker</h1>
+  <p>Bounce the ball, smash every brick, ride the combo.</p>
+</header>
+
+<div class="hud">
+  <div class="stat"><span class="label">Score</span><span class="value" id="score">0</span></div>
+  <div class="stat"><span class="label">Lives</span><span class="value" id="lives">♥♥♥</span></div>
+  <div class="stat"><span class="label">Level</span><span class="value" id="level">1/3</span></div>
+  <div class="stat"><span class="label">Combo</span><span class="value" id="combo">×1</span></div>
+</div>
+
+<div class="game-shell stage-wrap">
+  <canvas id="stage" width="480" height="600" aria-label="Brick breaker play field"></canvas>
+
+  <div class="overlay" id="overlay-start">
+    <h2>Ready to break?</h2>
+    <p>Move the paddle with mouse, touch or <kbd>←</kbd><kbd>→</kbd>.<br>
+       Launch with <kbd>Space</kbd> or a click.</p>
+    <button class="btn primary" id="btn-start">Start Game</button>
+  </div>
+
+  <div class="overlay hidden" id="overlay-pause">
+    <h2>Paused</h2>
+    <button class="btn primary" id="btn-resume">Resume</button>
+    <p style="font-size:.78rem;">or press <kbd>Space</kbd></p>
+  </div>
+
+  <div class="overlay hidden" id="overlay-level">
+    <h2 id="level-title">Level Cleared!</h2>
+    <p>Score so far <strong id="level-score">0</strong></p>
+    <button class="btn primary" id="btn-next">Next Level</button>
+  </div>
+
+  <div class="overlay hidden" id="overlay-end">
+    <h2 id="end-title">Game Over</h2>
+    <p>Final score <strong id="end-score">0</strong></p>
+    <button class="btn primary" id="btn-retry">Play Again</button>
+  </div>
+</div>
+
+<section class="instructions card">
+  <strong>How to play:</strong> keep the ball alive with your paddle — the edges of
+  the paddle send it flying at sharper angles. Bricks are worth more the higher they
+  sit, and every brick you smash without touching the paddle raises your combo
+  multiplier. Three levels, three lives. Good luck!
+</section>
+
+<script src="../../shared/common.js"></script>
+<script src="game.js"></script>
+</body>
+</html>

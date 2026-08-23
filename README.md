@@ -15,7 +15,7 @@ vanilla HTML/CSS/JavaScript — no frameworks, no build step. Open any game's
 | 2 | Memory Card Match | DOM cards | ✅ |
 | 3 | Minesweeper Classic | DOM grid logic | ✅ |
 | 4 | 2048 Merge | Swipe/merge puzzle | ✅ |
-| 5 | Brick Breaker | Canvas physics | ⬜ |
+| 5 | Brick Breaker | Canvas physics | ✅ |
 | 6 | Block Drop (Tetris-style) | Falling-block puzzle | ⬜ |
 | 7 | Flappy Glide | One-button physics | ⬜ |
 | 8 | Tic-Tac-Toe vs AI | Minimax AI board game | ⬜ |
