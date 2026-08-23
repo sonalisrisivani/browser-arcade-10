@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Memory Card Match — Browser Arcade</title>
+<link rel="stylesheet" href="../../shared/styles.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="back-link" href="../../index.html">← Arcade</a>
+
+<header class="game-header">
+  <h1>🃏 Memory Card Match</h1>
+  <p>Flip two cards a turn. Find every pair in as few moves as you can.</p>
+</header>
+
+<div class="hud">
+  <div class="stat"><span class="label">Moves</span><span class="value" id="moves">0</span></div>
+  <div class="stat"><span class="label">Time</span><span class="value" id="time">0s</span></div>
+  <div class="stat"><span class="label">Pairs</span><span class="value" id="pairs">0/8</span></div>
+  <div class="stat"><span class="label">Best Time</span><span class="value" id="best">—</span></div>
+</div>
+
+<div class="controls-row" style="margin-bottom:.75rem;">
+  <div class="seg" role="group" aria-label="Difficulty">
+    <button class="btn small seg-btn active" data-size="4">4 × 4</button>
+    <button class="btn small seg-btn" data-size="6">6 × 6</button>
+  </div>
+  <button class="btn ghost small" id="btn-restart">↻ Restart</button>
+</div>
+
+<div class="game-shell board-wrap">
+  <div id="board" class="board" aria-label="Card grid"></div>
+
+  <div class="overlay hidden" id="overlay-win">
+    <h2>All Pairs Found! 🎉</h2>
+    <p class="big" id="win-stars"></p>
+    <p><strong id="win-moves"></strong> moves · <strong id="win-time"></strong>s</p>
+    <p id="win-best-note" class="new-best hidden">🏆 New best time!</p>
+    <button class="btn primary" id="btn-again">Play Again</button>
+  </div>
+</div>
+
+<section class="instructions card">
+  <strong>How to play:</strong> click any two cards to flip them. Matching cards stay
+  face-up; mismatches flip back. Clear the whole grid — fewer moves earn more stars
+  (⭐⭐⭐). The timer starts on your first flip.
+</section>
+
+<script src="../../shared/common.js"></script>
+<script src="game.js"></script>
+</body>
+</html>

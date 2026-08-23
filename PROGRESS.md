@@ -6,7 +6,7 @@ Source of truth for project progress. Updated after every meaningful milestone.
 |---|------|--------|----------|----------------|---------|-----------|--------|--------|
 | 0 | Project setup (docs, repo, hub, shared UI, test harness) | — | ✅ | ✅ | ✅ | ✅ | ✅ | Complete |
 | 1 | Neon Snake | `games/game-01-snake` | ✅ | ✅ | ✅ | ✅ | ✅ | Complete |
-| 2 | Memory Card Match | `games/game-02-memory-match` | ✅ | ⬜ | ⬜ | ⬜ | ⬜ | Not started |
+| 2 | Memory Card Match | `games/game-02-memory-match` | ✅ | ✅ | ✅ | ✅ | ✅ | Complete |
 | 3 | Minesweeper Classic | `games/game-03-minesweeper` | ✅ | ⬜ | ⬜ | ⬜ | ⬜ | Not started |
 | 4 | 2048 Merge | `games/game-04-2048` | ✅ | ⬜ | ⬜ | ⬜ | ⬜ | Not started |
 | 5 | Brick Breaker | `games/game-05-breakout` | ✅ | ⬜ | ⬜ | ⬜ | ⬜ | Not started |

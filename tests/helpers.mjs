@@ -71,10 +71,25 @@ export function loadPage(relDir) {
   const dom = new JSDOM(html, {
     url: `file://${dir}/index.html`,
     runScripts: 'outside-only',
-    pretendToBeVisual: true,
   });
   const { window } = dom;
   stubCanvas(window);
+
+  // Opaque origins (file://) get no localStorage from jsdom — polyfill one so
+  // Arcade.storage behaves like a normal browser.
+  if (!window.localStorage) {
+    const store = new Map();
+    const ls = {
+      getItem: (k) => (store.has(String(k)) ? store.get(String(k)) : null),
+      setItem: (k, v) => store.set(String(k), String(v)),
+      removeItem: (k) => store.delete(String(k)),
+      clear: () => store.clear(),
+      key: (i) => Array.from(store.keys())[i] ?? null,
+      get length() { return store.size; },
+    };
+    Object.defineProperty(window, 'localStorage', { value: ls, configurable: true });
+    Object.defineProperty(window, 'sessionStorage', { value: ls, configurable: true });
+  }
 
   // rAF shim backed by timers so awaited frames actually settle.
   window.requestAnimationFrame = (cb) =>
