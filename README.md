@@ -4,6 +4,12 @@ Ten polished, independently playable browser games in one repository. Built with
 vanilla HTML/CSS/JavaScript — no frameworks, no build step. Open any game's
 `index.html` and play.
 
+## ▶️ Play online
+
+**https://sonalisrisivani.github.io/browser-arcade-10/**
+
+Every game is playable directly from that page — no install, no build.
+
 > This project is being built autonomously, one sprint per game. Progress is tracked
 > in [`PROGRESS.md`](PROGRESS.md); live agent state in [`EXECUTION.md`](EXECUTION.md).
 
