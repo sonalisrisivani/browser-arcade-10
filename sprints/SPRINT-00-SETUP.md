@@ -12,7 +12,7 @@ Initialize repository, GitHub remote, hub page, shared design system, test harne
 - [x] Hub `index.html` listing all 10 games (cards update as games land)
 - [x] Test harness `tests/helpers.mjs` + runner wiring (`node --test tests/`)
 - [x] Install dev dependencies (jsdom, 0 vulnerabilities)
-- [ ] Create GitHub repo via `gh` and push initial commit
+- [x] Create GitHub repo via `gh` and push initial commit
 
 ## Implementation Notes
 
@@ -25,7 +25,7 @@ Initialize repository, GitHub remote, hub page, shared design system, test harne
 
 - [x] `npm run check` — 3/3 files OK
 - [x] jsdom hub load: title OK, 10 cards present
-- [ ] `git push` verified (`gh repo view`)
+- [x] `git push` verified (`gh repo view`)
 
 ## Problems Encountered
 
@@ -46,12 +46,12 @@ Initialize repository, GitHub remote, hub page, shared design system, test harne
 
 ## Git Commit
 
-(Pending)
+`c3b83fe` chore: project scaffolding, docs, shared UI system, test harness
 
 ## Git Push
 
-(Pending)
+Pushed to https://github.com/sonalisrisivani/browser-arcade-10 (verified via gh repo view)
 
 ## Status
 
-IN PROGRESS
+COMPLETE

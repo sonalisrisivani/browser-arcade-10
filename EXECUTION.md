@@ -4,10 +4,10 @@ Live execution state. Update at every sprint boundary so any agent can resume.
 
 ## Current state
 
-- **Current phase:** Phase 1 → Sprint 0
-- **Current sprint:** SPRINT-00-SETUP
-- **Last completed sprint:** none (Phase 1 docs just written)
-- **Next action:** git init, create GitHub repo, initial commit + push
+- **Current phase:** Sprint 1 — Game 01 Snake
+- **Current sprint:** SPRINT-01-GAME-01
+- **Last completed sprint:** Sprint 0 — setup, repo live
+- **Next action:** implement games/game-01-snake + tests, commit, push
 
 ## Environment snapshot
 
@@ -23,10 +23,10 @@ Live execution state. Update at every sprint boundary so any agent can resume.
 
 ## Git state
 
-- **Remote:** (to be created in Sprint 0)
+- **Remote:** https://github.com/sonalisrisivani/browser-arcade-10
 - **Branch:** main
-- **Last commit:** —
-- **Last push:** —
+- **Last commit:** c3b83fe chore: project scaffolding
+- **Last push:** 2026-08-23T10:20:04Z (verified)
 
 ## Blockers
 
