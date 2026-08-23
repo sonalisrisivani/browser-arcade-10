@@ -12,7 +12,7 @@ Source of truth for project progress. Updated after every meaningful milestone.
 | 5 | Brick Breaker | `games/game-05-breakout` | ✅ | ✅ | ✅ | ✅ | ✅ | Complete |
 | 6 | Block Drop | `games/game-06-block-drop` | ✅ | ✅ | ✅ | ✅ | ✅ | Complete |
 | 7 | Flappy Glide | `games/game-07-flappy-glide` | ✅ | ✅ | ✅ | ✅ | ✅ | Complete |
-| 8 | Tic-Tac-Toe vs AI | `games/game-08-tictactoe` | ✅ | ⬜ | ⬜ | ⬜ | ⬜ | Not started |
+| 8 | Tic-Tac-Toe vs AI | `games/game-08-tictactoe` | ✅ | ✅ | ✅ | ✅ | ✅ | Complete |
 | 9 | Type Storm | `games/game-09-type-storm` | ✅ | ⬜ | ⬜ | ⬜ | ⬜ | Not started |
 | 10 | Simon Says | `games/game-10-simon` | ✅ | ⬜ | ⬜ | ⬜ | ⬜ | Not started |
 

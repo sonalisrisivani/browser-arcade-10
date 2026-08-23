@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tic-Tac-Toe vs AI — Browser Arcade</title>
+<link rel="stylesheet" href="../../shared/styles.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="back-link" href="../../index.html">← Arcade</a>
+
+<header class="game-header">
+  <h1>⭕ Tic-Tac-Toe vs AI</h1>
+  <p>Three in a row. Simple rules, ruthless machine.</p>
+</header>
+
+<div class="hud">
+  <div class="stat"><span class="label">You</span><span class="value" id="wins">0</span></div>
+  <div class="stat"><span class="label">Draws</span><span class="value" id="draws">0</span></div>
+  <div class="stat"><span class="label">AI</span><span class="value" id="losses">0</span></div>
+</div>
+
+<div class="controls-row" style="margin-bottom:.75rem;">
+  <div class="seg" role="group" aria-label="Difficulty">
+    <button class="btn small seg-btn" data-level="easy">Easy</button>
+    <button class="btn small seg-btn active" data-level="medium">Medium</button>
+    <button class="btn small seg-btn" data-level="hard">Hard</button>
+  </div>
+  <button class="btn ghost small" id="btn-mode">🤖 vs AI</button>
+  <button class="btn ghost small" id="btn-reset">↻ Reset Series</button>
+</div>
+
+<div class="game-shell board-wrap">
+  <p class="status-line" id="status">Your move — you're ✕</p>
+  <div id="board" class="ttt" aria-label="Tic-tac-toe board"></div>
+
+  <div class="overlay hidden" id="overlay-result">
+    <h2 id="result-title">Draw!</h2>
+    <p id="result-detail"></p>
+    <button class="btn primary" id="btn-next-round">Next Round</button>
+  </div>
+</div>
+
+<section class="instructions card">
+  <strong>How to play:</strong> tap a square to place your ✕. The AI answers with ⬤.
+  Line up three to win — rows, columns or diagonals. Hard mode plays a perfect game:
+  the best you can do is a draw. Or switch to 2-player and duel a friend.
+</section>
+
+<script src="../../shared/common.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
