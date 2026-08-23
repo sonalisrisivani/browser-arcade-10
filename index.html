@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Browser Arcade — 10 Games</title>
+<link rel="stylesheet" href="shared/styles.css">
+<style>
+  .grid {
+    width: 100%;
+    max-width: 980px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+  }
+  .game-card {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    text-decoration: none;
+    color: var(--text);
+    transition: transform .15s ease, border-color .15s ease;
+    position: relative;
+  }
+  .game-card:hover:not(.wip), .game-card:focus-visible { transform: translateY(-3px); border-color: var(--accent); }
+  .game-card.wip { opacity: .55; cursor: default; }
+  .game-card .icon { font-size: 2rem; line-height: 1; }
+  .game-card h2 { margin: 0; font-size: 1.1rem; }
+  .game-card p { margin: 0; color: var(--text-dim); font-size: .84rem; flex: 1; }
+  .badge {
+    align-self: flex-start;
+    font-size: .68rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    padding: .25em .7em;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+  }
+  .badge.done { color: #0b0e17; background: var(--good); border-color: transparent; font-weight: 700; }
+  header.hero { text-align: center; margin: 2.5rem 0 1.75rem; }
+  header.hero h1 {
+    font-size: clamp(2rem, 6vw, 3.2rem);
+    margin: 0;
+    background: linear-gradient(90deg, #4f7cff, #22d3ee);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  header.hero p { color: var(--text-dim); }
+</style>
+</head>
+<body>
+<header class="hero">
+  <h1>🕹️ Browser Arcade</h1>
+  <p>Ten tiny games. Zero installs. Pure vanilla JS.</p>
+</header>
+
+<main class="grid" id="gameGrid">
+  <a class="game-card wip" href="games/game-01-snake/index.html" data-status="wip">
+    <span class="icon">🐍</span><h2>Neon Snake</h2>
+    <p>Eat, grow, survive. Classic snake with neon style.</p>
+    <span class="badge">Coming soon</span>
+  </a>
+  <a class="game-card wip" href="games/game-02-memory-match/index.html" data-status="wip">
+    <span class="icon">🃏</span><h2>Memory Card Match</h2>
+    <p>Flip cards and find every pair in fewest moves.</p>
+    <span class="badge">Coming soon</span>
+  </a>
+  <a class="game-card wip" href="games/game-03-minesweeper/index.html" data-status="wip">
+    <span class="icon">💣</span><h2>Minesweeper Classic</h2>
+    <p>Deduce every safe cell. Flag the bombs.</p>
+    <span class="badge">Coming soon</span>
+  </a>
+  <a class="game-card wip" href="games/game-04-2048/index.html" data-status="wip">
+    <span class="icon">🔢</span><h2>2048 Merge</h2>
+    <p>Slide tiles, merge numbers, reach 2048.</p>
+    <span class="badge">Coming soon</span>
+  </a>
+  <a class="game-card wip" href="games/game-05-breakout/index.html" data-status="wip">
+    <span class="icon">🧱</span><h2>Brick Breaker</h2>
+    <p>Bounce the ball, smash every brick.</p>
+    <span class="badge">Coming soon</span>
+  </a>
+  <a class="game-card wip" href="games/game-06-block-drop/index.html" data-status="wip">
+    <span class="icon">🟦</span><h2>Block Drop</h2>
+    <p>Rotate falling blocks and clear lines.</p>
+    <span class="badge">Coming soon</span>
+  </a>
+  <a class="game-card wip" href="games/game-07-flappy-glide/index.html" data-status="wip">
+    <span class="icon">🐤</span><h2>Flappy Glide</h2>
+    <p>Tap to fly through endless pipe gaps.</p>
+    <span class="badge">Coming soon</span>
+  </a>
+  <a class="game-card wip" href="games/game-08-tictactoe/index.html" data-status="wip">
+    <span class="icon">⭕</span><h2>Tic-Tac-Toe vs AI</h2>
+    <p>Beat the machine — if you can.</p>
+    <span class="badge">Coming soon</span>
+  </a>
+  <a class="game-card wip" href="games/game-09-type-storm/index.html" data-status="wip">
+    <span class="icon">⌨️</span><h2>Type Storm</h2>
+    <p>Type fast before the words hit the floor.</p>
+    <span class="badge">Coming soon</span>
+  </a>
+  <a class="game-card wip" href="games/game-10-simon/index.html" data-status="wip">
+    <span class="icon">🎵</span><h2>Simon Says</h2>
+    <p>Watch, listen, repeat the signal.</p>
+    <span class="badge">Coming soon</span>
+  </a>
+</main>
+
+<footer style="margin:2rem 0;color:var(--text-dim);font-size:.8rem;">
+  Built autonomously · <a href="https://github.com/sonalisrisivani/browser-arcade-10" style="color:var(--accent-2)">GitHub</a>
+</footer>
+</body>
+</html>
