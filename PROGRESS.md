@@ -10,7 +10,7 @@ Source of truth for project progress. Updated after every meaningful milestone.
 | 3 | Minesweeper Classic | `games/game-03-minesweeper` | ✅ | ✅ | ✅ | ✅ | ✅ | Complete |
 | 4 | 2048 Merge | `games/game-04-2048` | ✅ | ✅ | ✅ | ✅ | ✅ | Complete |
 | 5 | Brick Breaker | `games/game-05-breakout` | ✅ | ✅ | ✅ | ✅ | ✅ | Complete |
-| 6 | Block Drop | `games/game-06-block-drop` | ✅ | ⬜ | ⬜ | ⬜ | ⬜ | Not started |
+| 6 | Block Drop | `games/game-06-block-drop` | ✅ | ✅ | ✅ | ✅ | ✅ | Complete |
 | 7 | Flappy Glide | `games/game-07-flappy-glide` | ✅ | ⬜ | ⬜ | ⬜ | ⬜ | Not started |
 | 8 | Tic-Tac-Toe vs AI | `games/game-08-tictactoe` | ✅ | ⬜ | ⬜ | ⬜ | ⬜ | Not started |
 | 9 | Type Storm | `games/game-09-type-storm` | ✅ | ⬜ | ⬜ | ⬜ | ⬜ | Not started |

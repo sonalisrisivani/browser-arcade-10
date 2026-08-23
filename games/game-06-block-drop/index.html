@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Block Drop — Browser Arcade</title>
+<link rel="stylesheet" href="../../shared/styles.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="back-link" href="../../index.html">← Arcade</a>
+
+<header class="game-header">
+  <h1>🟦 Block Drop</h1>
+  <p>Rotate, stack, clear lines. Don't touch the sky.</p>
+</header>
+
+<div class="hud">
+  <div class="stat"><span class="label">Score</span><span class="value" id="score">0</span></div>
+  <div class="stat"><span class="label">Best</span><span class="value" id="best">0</span></div>
+  <div class="stat"><span class="label">Lines</span><span class="value" id="lines">0</span></div>
+  <div class="stat"><span class="label">Level</span><span class="value" id="level">1</span></div>
+</div>
+
+<div class="layout">
+  <div class="game-shell well-wrap">
+    <canvas id="well" width="300" height="600" aria-label="Block Drop well"></canvas>
+
+    <div class="overlay" id="overlay-start">
+      <h2>Stack it up!</h2>
+      <p><kbd>←</kbd><kbd>→</kbd> move · <kbd>↑</kbd>/<kbd>X</kbd> rotate ·
+         <kbd>Z</kbd> rotate back<br>
+         <kbd>↓</kbd> soft drop · <kbd>Space</kbd> hard drop · <kbd>P</kbd> pause</p>
+      <button class="btn primary" id="btn-start">Start Game</button>
+    </div>
+
+    <div class="overlay hidden" id="overlay-pause">
+      <h2>Paused</h2>
+      <button class="btn primary" id="btn-resume">Resume</button>
+    </div>
+
+    <div class="overlay hidden" id="overlay-over">
+      <h2>Top Out!</h2>
+      <p>Score <strong id="final-score">0</strong> · Lines <strong id="final-lines">0</strong></p>
+      <p id="new-best" class="hidden">🏆 New personal best!</p>
+      <button class="btn primary" id="btn-restart">Play Again</button>
+    </div>
+  </div>
+
+  <aside class="side">
+    <div class="panel side-box">
+      <span class="side-label">Next</span>
+      <canvas id="next" width="96" height="96"></canvas>
+    </div>
+    <div class="touch-row" aria-label="Touch controls">
+      <button class="pad" data-act="left" aria-label="Move left">◀</button>
+      <button class="pad" data-act="rotate" aria-label="Rotate">⟳</button>
+      <button class="pad" data-act="right" aria-label="Move right">▶</button>
+      <button class="pad" data-act="down" aria-label="Soft drop">▼</button>
+      <button class="pad wide" data-act="drop" aria-label="Hard drop">⇓ DROP</button>
+    </div>
+  </aside>
+</div>
+
+<section class="instructions card">
+  <strong>How to play:</strong> guide falling blocks into complete rows. A full row
+  vanishes and scores — 1/2/3/4 rows pay 100/300/500/800 × level. Every 10 lines
+  levels you up and gravity gets meaner. The pale ghost shows where your piece will
+  land. Hard drops score double!
+</section>
+
+<script src="../../shared/common.js"></script>
+<script src="game.js"></script>
+</body>
+</html>

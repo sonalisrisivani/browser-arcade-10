@@ -1,0 +1,67 @@
+.layout {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  max-width: 560px;
+  flex-wrap: wrap;
+}
+
+.well-wrap {
+  position: relative;
+  width: min(300px, 72vw);
+  flex: 0 0 auto;
+}
+
+#well {
+  display: block;
+  width: 100%;
+  background: var(--bg-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow);
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  width: 130px;
+}
+
+.side-box {
+  padding: .6rem;
+  text-align: center;
+}
+.side-label {
+  font-size: .68rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+#next { width: 84px; height: 84px; margin-top: .3rem; }
+
+.touch-row {
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .4rem;
+}
+.pad {
+  border: 1px solid var(--border);
+  background: var(--bg-2);
+  color: var(--text);
+  font-size: 1.1rem;
+  padding: .55em 0;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+.pad:active { background: var(--accent); }
+.pad.wide { grid-column: 1 / -1; font-size: .85rem; font-weight: 700; }
+
+@media (pointer: coarse) {
+  .touch-row { display: grid; }
+}
+@media (max-width: 480px) {
+  .side { flex-direction: row; width: 100%; justify-content: center; }
+}

@@ -4,10 +4,10 @@ Live execution state. Update at every sprint boundary so any agent can resume.
 
 ## Current state
 
-- **Current phase:** Sprint 6 — Game 06 Block Drop
-- **Current sprint:** SPRINT-06-GAME-06
-- **Last completed sprint:** Sprint 5 — Brick Breaker (13/13 tests green; suite total 66)
-- **Next action:** implement games/game-06-block-drop + tests, commit, push
+- **Current phase:** Sprint 7 — Game 07 Flappy Glide
+- **Current sprint:** SPRINT-07-GAME-07
+- **Last completed sprint:** Sprint 6 — Block Drop (12/12 tests green; suite total 78)
+- **Next action:** implement games/game-07-flappy-glide + tests, commit, push
 
 ## Environment snapshot
 
