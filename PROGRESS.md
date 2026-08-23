@@ -23,3 +23,4 @@ Legend: ✅ done · 🚧 in progress · ⬜ not started · ❌ blocked
 - 2026-08-23: Phase 0 (environment inspection) complete.
 - 2026-08-23: Phase 1 (management docs) complete.
 - 2026-08-23: Sprint 0 complete — repo live at github.com/sonalisrisivani/browser-arcade-10
+- 2026-08-23: All 10 games shipped — 123/123 tests green, final audit passed

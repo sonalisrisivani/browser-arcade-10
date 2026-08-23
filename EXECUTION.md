@@ -4,10 +4,10 @@ Live execution state. Update at every sprint boundary so any agent can resume.
 
 ## Current state
 
-- **Current phase:** Sprint 11 — Final Audit
-- **Current sprint:** SPRINT-11-FINAL
+- **Current phase:** COMPLETE
+- **Current sprint:** none — project finished
 - **Last completed sprint:** Sprint 10 — Simon Says (11/11 tests green; suite total 123)
-- **Next action:** final audit checklist, docs finalization, last commit + push
+- **Next action:** none
 
 ## Environment snapshot
 
