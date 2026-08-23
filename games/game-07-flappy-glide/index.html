@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flappy Glide — Browser Arcade</title>
+<link rel="stylesheet" href="../../shared/styles.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="back-link" href="../../index.html">← Arcade</a>
+
+<header class="game-header">
+  <h1>🐤 Flappy Glide</h1>
+  <p>One button. Endless pipes. How far can you glide?</p>
+</header>
+
+<div class="hud">
+  <div class="stat"><span class="label">Score</span><span class="value" id="score">0</span></div>
+  <div class="stat"><span class="label">Best</span><span class="value" id="best">0</span></div>
+  <div class="stat"><span class="label">Medal</span><span class="value" id="medal">—</span></div>
+</div>
+
+<div class="game-shell stage-wrap">
+  <canvas id="sky" width="480" height="600" aria-label="Flappy Glide play field"></canvas>
+
+  <div class="overlay" id="overlay-start">
+    <h2>Tap to fly!</h2>
+    <p><kbd>Space</kbd>, click or tap to flap.<br>
+       Thread the gaps. Don't kiss the floor.</p>
+    <button class="btn primary" id="btn-start">Start Flying</button>
+  </div>
+
+  <div class="overlay hidden" id="overlay-pause">
+    <h2>Paused</h2>
+    <button class="btn primary" id="btn-resume">Resume</button>
+    <p style="font-size:.78rem;">or press <kbd>P</kbd></p>
+  </div>
+
+  <div class="overlay hidden" id="overlay-over">
+    <h2>Splat!</h2>
+    <p>Score <strong id="final-score">0</strong> · Best <strong id="final-best">0</strong></p>
+    <p class="big" id="medal-text"></p>
+    <button class="btn primary" id="btn-retry">Fly Again</button>
+    <p style="font-size:.78rem;">or press <kbd>R</kbd></p>
+  </div>
+</div>
+
+<section class="instructions card">
+  <strong>How to play:</strong> each flap fights gravity for a moment. Slip through
+  the pipe gaps — every pipe passed scores a point. Gaps shrink and the world
+  scrolls faster as your score climbs. Medals: 🥉 10 · 🥈 25 · 🥇 50.
+</section>
+
+<script src="../../shared/common.js"></script>
+<script src="game.js"></script>
+</body>
+</html>

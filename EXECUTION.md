@@ -4,10 +4,10 @@ Live execution state. Update at every sprint boundary so any agent can resume.
 
 ## Current state
 
-- **Current phase:** Sprint 7 — Game 07 Flappy Glide
-- **Current sprint:** SPRINT-07-GAME-07
-- **Last completed sprint:** Sprint 6 — Block Drop (12/12 tests green; suite total 78)
-- **Next action:** implement games/game-07-flappy-glide + tests, commit, push
+- **Current phase:** Sprint 8 — Game 08 Tic-Tac-Toe vs AI
+- **Current sprint:** SPRINT-08-GAME-08
+- **Last completed sprint:** Sprint 7 — Flappy Glide (12/12 tests green; suite total 90)
+- **Next action:** implement games/game-08-tictactoe + tests, commit, push
 
 ## Environment snapshot
 

@@ -1,0 +1,11 @@
+.stage-wrap { max-width: 520px; }
+
+#sky {
+  display: block;
+  width: 100%;
+  aspect-ratio: 480 / 600;
+  background: linear-gradient(#1b2a5e, #274b8f 60%, #35639f);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
