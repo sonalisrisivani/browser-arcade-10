@@ -19,7 +19,7 @@ vanilla HTML/CSS/JavaScript — no frameworks, no build step. Open any game's
 | 6 | Block Drop (Tetris-style) | Falling-block puzzle | ✅ |
 | 7 | Flappy Glide | One-button physics | ✅ |
 | 8 | Tic-Tac-Toe vs AI | Minimax AI board game | ✅ |
-| 9 | Type Storm | Typing action | ⬜ |
+| 9 | Type Storm | Typing action | ✅ |
 | 10 | Simon Says | Audio/visual memory | ⬜ |
 
 Status: ⬜ planned · 🚧 in progress · ✅ complete

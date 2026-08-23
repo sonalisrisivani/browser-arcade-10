@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Type Storm — Browser Arcade</title>
+<link rel="stylesheet" href="../../shared/styles.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="back-link" href="../../index.html">← Arcade</a>
+
+<header class="game-header">
+  <h1>⌨️ Type Storm</h1>
+  <p>Words are falling. Your keyboard is the umbrella.</p>
+</header>
+
+<div class="hud">
+  <div class="stat"><span class="label">Score</span><span class="value" id="score">0</span></div>
+  <div class="stat"><span class="label">WPM</span><span class="value" id="wpm">0</span></div>
+  <div class="stat"><span class="label">Accuracy</span><span class="value" id="accuracy">100%</span></div>
+  <div class="stat"><span class="label">Streak</span><span class="value" id="streak">×1</span></div>
+  <div class="stat"><span class="label">Lives</span><span class="value" id="lives">♥♥♥</span></div>
+</div>
+
+<div class="controls-row" style="margin-bottom:.75rem;">
+  <button class="btn primary small" id="btn-start">Start</button>
+  <button class="btn ghost small" id="btn-pause" disabled>Pause</button>
+</div>
+
+<div class="game-shell field-wrap">
+  <div id="field" class="storm-field" aria-label="Falling words"></div>
+
+  <div class="overlay" id="overlay-start">
+    <h2>Ready to type?</h2>
+    <p>Just start typing the words you see.<br>
+       Finish a word to blast it. Three misses and you're out.</p>
+    <button class="btn primary" id="btn-start-overlay">Start Storm</button>
+  </div>
+
+  <div class="overlay hidden" id="overlay-count">
+    <h2 class="big" id="count-num">3</h2>
+  </div>
+
+  <div class="overlay hidden" id="overlay-pause">
+    <h2>Paused</h2>
+    <button class="btn primary" id="btn-resume">Resume</button>
+  </div>
+
+  <div class="overlay hidden" id="overlay-over">
+    <h2>Storm Over!</h2>
+    <p>Score <strong id="final-score">0</strong> ·
+       <strong id="final-wpm">0</strong> WPM ·
+       <strong id="final-acc">100%</strong> accuracy</p>
+    <p id="final-level"></p>
+    <button class="btn primary" id="btn-retry">Try Again</button>
+  </div>
+</div>
+
+<section class="instructions card">
+  <strong>How to play:</strong> words rain from the sky. Type any word completely to
+  destroy it — longer words and streaks pay more. A missed word costs a life (you
+  have three). Every 10 words the storm intensifies. On phones, tapping the field
+  opens the keyboard.
+</section>
+
+<input id="ghost-input" class="sr-only" autocomplete="off" autocapitalize="off" aria-hidden="true" tabindex="-1">
+
+<script src="../../shared/common.js"></script>
+<script src="game.js"></script>
+</body>
+</html>

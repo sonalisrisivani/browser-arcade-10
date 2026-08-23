@@ -112,9 +112,11 @@ describe('Game 04 — 2048 Merge', () => {
 
   it('arrow keys drive moves after start', () => {
     doc.getElementById('btn-start').click();
+    Game._debug.setBoard(row([0, 0, 0, 2], 0));
+    const n = Game.tileCount();
     pressKey(win, 'ArrowLeft');
     assert.equal(Game.state, 'playing');
-    assert.ok(Game.tileCount() >= 3, 'move accepted → tile spawned');
+    assert.equal(Game.tileCount(), n + 1, 'move accepted → tile spawned');
     pressKey(win, 'x');
     assert.equal(Game.state, 'playing');
   });

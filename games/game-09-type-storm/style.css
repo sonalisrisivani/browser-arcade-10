@@ -1,0 +1,46 @@
+.field-wrap { max-width: 640px; }
+
+.storm-field {
+  position: relative;
+  height: clamp(320px, 60vh, 460px);
+  background: var(--bg-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.storm-field::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 3px;
+  background: var(--bad);
+  opacity: .7;
+}
+
+.word {
+  position: absolute;
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: clamp(1rem, 3.5vw, 1.35rem);
+  letter-spacing: .06em;
+  white-space: nowrap;
+  padding: .18em .45em;
+  border-radius: 8px;
+  background: rgba(38, 46, 84, .85);
+  border: 1px solid var(--border);
+  transition: background .1s;
+}
+.word .done { color: var(--accent-2); }
+.word.active { border-color: var(--accent); }
+.word.blasted { animation: blast .22s ease-out forwards; }
+@keyframes blast {
+  to { opacity: 0; transform: scale(1.6); }
+}
+
+@keyframes hitline {
+  from { box-shadow: inset 0 -14px 20px -10px rgba(248,113,113,.9); }
+  to   { box-shadow: inset 0 -14px 20px -10px rgba(248,113,113,0); }
+}
+.storm-field.hit { animation: hitline .4s ease-out; }
