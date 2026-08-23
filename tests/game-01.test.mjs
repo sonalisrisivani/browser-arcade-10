@@ -7,8 +7,8 @@ const DIR = 'games/game-01-snake';
 describe('Game 01 — Neon Snake', () => {
   let win, doc, Game;
 
-  beforeEach(() => {
-    ({ window: win, document: doc } = loadPage(DIR));
+  beforeEach(async () => {
+    ({ window: win, document: doc } = await loadPage(DIR));
     Game = win.Game;
   });
 

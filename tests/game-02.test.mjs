@@ -8,8 +8,8 @@ const DIR = 'games/game-02-memory-match';
 describe('Game 02 — Memory Card Match', () => {
   let win, doc, Game;
 
-  beforeEach(() => {
-    ({ window: win, document: doc } = loadPage(DIR));
+  beforeEach(async () => {
+    ({ window: win, document: doc } = await loadPage(DIR));
     Game = win.Game;
   });
 

@@ -4,10 +4,10 @@ Live execution state. Update at every sprint boundary so any agent can resume.
 
 ## Current state
 
-- **Current phase:** Sprint 3 — Game 03 Minesweeper
-- **Current sprint:** SPRINT-03-GAME-03
-- **Last completed sprint:** Sprint 2 — Memory Card Match (12/12 tests green; suite total 27)
-- **Next action:** implement games/game-01-snake + tests, commit, push
+- **Current phase:** Sprint 4 — Game 04 2048 Merge
+- **Current sprint:** SPRINT-04-GAME-04
+- **Last completed sprint:** Sprint 3 — Minesweeper (10/10 tests green; suite total 37)
+- **Next action:** implement games/game-04-2048 + tests, commit, push
 
 ## Environment snapshot
 

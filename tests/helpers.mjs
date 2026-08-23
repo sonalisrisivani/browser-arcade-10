@@ -62,10 +62,11 @@ function readScript(absFile) {
 }
 
 /**
- * Load a game page by folder name, e.g. loadPage('games/game-01-snake').
- * Executes <script src> files in order, then fires DOMContentLoaded.
+ * Load a game page by folder name, e.g. await loadPage('games/game-01-snake').
+ * Executes <script src> files in order, then resolves after jsdom's native
+ * DOMContentLoaded so each game's init() runs exactly once.
  */
-export function loadPage(relDir) {
+export async function loadPage(relDir) {
   const dir = path.join(ROOT, relDir);
   const html = fs.readFileSync(path.join(dir, 'index.html'), 'utf8');
   const dom = new JSDOM(html, {
@@ -106,9 +107,14 @@ export function loadPage(relDir) {
     }
   }
 
-  window.document.dispatchEvent(
-    new window.Event('DOMContentLoaded', { bubbles: true })
-  );
+  // Wait for jsdom's own DOMContentLoaded (it fires asynchronously after parsing).
+  await new Promise((resolve) => {
+    if (window.document.readyState === 'loading') {
+      window.document.addEventListener('DOMContentLoaded', resolve, { once: true });
+    } else {
+      resolve();
+    }
+  });
 
   return { dom, window, document: window.document };
 }

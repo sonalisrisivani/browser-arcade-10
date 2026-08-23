@@ -132,4 +132,50 @@ Both suites exit cleanly on their own (~3.5s combined); no force-exit flag requi
 Avoid `pretendToBeVisual` unless its full feature set is required; prefer explicit
 shims whose lifetimes are under test control.
 
+---
+
+## Failure 4: games initialized twice under the test runner (double listeners)
+
+### Context
+
+Sprint 3 — Minesweeper flag-mode clicks appeared to "do nothing"; every toggle
+reverted instantly. Only reproducible via `node --test`, not plain scripts.
+
+### Command
+
+```bash
+node --test tests/game-03.test.mjs
+```
+
+### Error
+
+Single button click produced *two* `toggleFlagMode` invocations (verified by
+temporary instrumentation): state toggled true → false within one click.
+
+### Diagnosis
+
+jsdom fires its **native** `DOMContentLoaded` asynchronously after page parsing,
+*i.e.*, after `loadPage()` had already returned and the harness had manually
+dispatched a synthetic `DOMContentLoaded`. Result: each game's `init()` ran twice
+→ two click listeners on every control.
+
+### Fix Attempt
+
+`loadPage()` is now async: it executes the game's scripts, then **awaits jsdom's
+native DOMContentLoaded** instead of synthesizing one. All suites updated to
+`beforeEach(async …) => { … = await loadPage(DIR) }`.
+
+### Result
+
+Exactly one init per page load across all suites; flag mode behaves correctly;
+37/37 tests green with clean process exit. Also added an `afterEach` timer-cleanup
+net so a failing assertion can no longer leak a running game interval (the
+secondary hang cause).
+
+### Prevention
+
+Never synthesize lifecycle events that the environment also emits — await the
+real ones. Instrument listener counts before blaming event logic.
+
+
 

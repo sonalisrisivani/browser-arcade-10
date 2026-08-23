@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minesweeper Classic — Browser Arcade</title>
+<link rel="stylesheet" href="../../shared/styles.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="back-link" href="../../index.html">← Arcade</a>
+
+<header class="game-header">
+  <h1>💣 Minesweeper Classic</h1>
+  <p>Reveal every safe square. Flag the bombs. One wrong tap… boom.</p>
+</header>
+
+<div class="hud">
+  <div class="stat"><span class="label">Mines</span><span class="value" id="mines">10</span></div>
+  <div class="stat"><span class="label">Time</span><span class="value" id="time">0</span></div>
+  <div class="stat"><span class="label">Best</span><span class="value" id="best">—</span></div>
+</div>
+
+<div class="controls-row" style="margin-bottom:.75rem;">
+  <button class="btn small" id="btn-face" aria-label="New game">🙂 New</button>
+  <div class="seg" role="group" aria-label="Difficulty">
+    <button class="btn small seg-btn active" data-level="beginner">Beginner</button>
+    <button class="btn small seg-btn" data-level="intermediate">Intermediate</button>
+  </div>
+  <button class="btn ghost small" id="btn-flagmode" aria-pressed="false">🚩 Flag mode</button>
+</div>
+
+<div class="game-shell board-wrap">
+  <div id="banner" class="banner hidden"></div>
+  <div id="board" class="ms-board" aria-label="Minefield"></div>
+</div>
+
+<section class="instructions card">
+  <strong>How to play:</strong> click to reveal a square. Numbers tell you how many
+  of the 8 neighbours hide a mine. Right-click (or long-press / Flag mode) plants a
+  flag. Your first click is always safe. Clear every safe square to win!
+</section>
+
+<script src="../../shared/common.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
