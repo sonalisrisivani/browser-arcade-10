@@ -20,7 +20,7 @@ vanilla HTML/CSS/JavaScript — no frameworks, no build step. Open any game's
 | 7 | Flappy Glide | One-button physics | ✅ |
 | 8 | Tic-Tac-Toe vs AI | Minimax AI board game | ✅ |
 | 9 | Type Storm | Typing action | ✅ |
-| 10 | Simon Says | Audio/visual memory | ⬜ |
+| 10 | Simon Says | Audio/visual memory | ✅ |
 
 Status: ⬜ planned · 🚧 in progress · ✅ complete
 

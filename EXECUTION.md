@@ -4,10 +4,10 @@ Live execution state. Update at every sprint boundary so any agent can resume.
 
 ## Current state
 
-- **Current phase:** Sprint 10 — Game 10 Simon Says
-- **Current sprint:** SPRINT-10-GAME-10
-- **Last completed sprint:** Sprint 9 — Type Storm (11/11 tests green; suite total 112)
-- **Next action:** implement games/game-10-simon + tests, commit, push
+- **Current phase:** Sprint 11 — Final Audit
+- **Current sprint:** SPRINT-11-FINAL
+- **Last completed sprint:** Sprint 10 — Simon Says (11/11 tests green; suite total 123)
+- **Next action:** final audit checklist, docs finalization, last commit + push
 
 ## Environment snapshot
 
