@@ -36,6 +36,8 @@ describe('Game 02 — Memory Card Match', () => {
     assert.equal(cells().length, 16);
     assert.equal(doc.getElementById('moves').textContent, '0');
     assert.equal(doc.getElementById('pairs').textContent, '0/8');
+    assert.ok(cells().every((c) => c.querySelector('.card-inner')),
+      'each cell contains its inner wrapper');
   });
 
   it('first flip starts the game and reveals the card', () => {

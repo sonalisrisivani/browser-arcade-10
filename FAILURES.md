@@ -179,3 +179,47 @@ real ones. Instrument listener counts before blaming event logic.
 
 
 
+
+---
+
+## Failure 5: Memory Match cards invisible on the live site (inline span collapse)
+
+### Context
+
+Post-deployment user report: Memory Card Match board renders with no visible cards.
+
+### Command
+
+Manual inspection of `games/game-02-memory-match/style.css` + DOM structure.
+
+### Error
+
+No console error — purely a layout failure. Card cells occupy grid space but
+paint nothing.
+
+### Diagnosis
+
+`.card-inner` is created as a `<span>` (inline element) and sized via
+`width:100%; height:100%` — properties that **do not apply to inline
+elements**. Its children (`.card-face`s) are absolutely positioned and
+contribute no intrinsic size, so `.card-inner` collapses to 0×0 and both faces
+(inset:0 within a zero box) render nothing.
+
+The jsdom smoke tests verified state classes and click behavior, not computed
+geometry, so the bug was invisible to the suite.
+
+### Fix Attempt
+
+Added `display: block;` to `.card-inner` so it fills the aspect-ratio-sized
+button and gives the absolutely-positioned faces a real containing block.
+
+### Result
+
+Cards render face-down correctly; flip/match animations unaffected; all 12
+game-02 tests still green.
+
+### Prevention
+
+Percentage sizing on generated markup requires block/flex/grid display. When
+tests must stand in for a browser, add at least minimal geometry assertions
+(offsetWidth/offsetHeight) for critical visual components.
